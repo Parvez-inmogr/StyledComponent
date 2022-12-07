@@ -1,24 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import {StyledButton} from './Style/Button'
+import {StyledWrapper} from './Style/Wrapper'
+import {StyledPara} from './Style/Para'
 
 function App() {
+  const fruit={
+    names:[
+      'Apple','Banana','Orange'
+    ]
+  }
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <StyledWrapper>
+      <div>
+        <h1>Welcome to StyledComponent </h1>
+      </div>
+      <div>
+        {fruit.names.map((name, index)=>{
+         return <StyledPara>Fruit:{name}</StyledPara>
+        })}
+
+      </div>
+      
+      
+     
+   
+
+      </StyledWrapper>
+      <StyledButton>Submit</StyledButton>
+      </div>
+      
   );
 }
 
