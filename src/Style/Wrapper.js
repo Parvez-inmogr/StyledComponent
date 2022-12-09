@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
- const color='green'
+ const color='#D3D3D3'
 
 
 export const StyledWrapper =styled.section `
